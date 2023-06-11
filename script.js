@@ -1,6 +1,6 @@
 const nodes = new Array(9);
 const next = document.querySelector(".next");
-const win = document.querySelector(".win");
+var text = document.querySelector(".text");
 const reset = document.querySelector("#reset");
 
 let input = "X";
@@ -12,11 +12,7 @@ for (var i = 1; i <= 9; i++) {
 }
 
 reset.addEventListener("click", () => {
-  nodes.forEach((node) => {
-    node.innerText = "";
-  });
-  win.innerText = `Next plays : X`;
-  winner = false;
+  location.reload();
 });
 
 function toggle(input) {
@@ -40,7 +36,7 @@ function checkwinner() {
       nodes[e[2]].innerText === nodes[e[1]].innerText &&
       nodes[e[0]].innerText !== ""
     ) {
-      win.innerText = `Winner is : ${nodes[e[0]].innerText}`;
+      text.innerText = `Winner is : ${nodes[e[0]].innerText}`;
       winner = true;
     }
   });
@@ -63,6 +59,15 @@ nodes.forEach((key) => {
         key.removeEventListener("click", (node) => {
           node.target.innerText = "";
         });
+        document
+          .querySelector(".info")
+          .getElementsByTagName("img")[0].style.width = "50px";
+      }
+    }
+
+    if (moves == 9) {
+      if (winner == false) {
+        text.innerText = `Match Draw`;
       }
     }
   });
