@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aquamarine;
+}
+
+h1 {
+  margin-bottom: 3rem;
+  color: rebeccapurple;
+}
+.game {
+  border: 12px solid rebeccapurple;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.info {
+  width: 20vw;
+  height: 10vh;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: rebeccapurple;
+  font-family: Helvetica;
+  font-size: larger;
+}
+
+#reset {
+  width: 5vw;
+  color: rebeccapurple;
+  background-color: aquamarine;
+  border: rebeccapurple solid 0.5px;
+  border-radius: 5px;
+  height: 5vh;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.game-body {
+  width: 50%;
+  height: 50vh;
+  background-color: aliceblue;
+  box-shadow: -0.7rem -0.8rem 1.3rem rebeccapurple;
+  display: flex;
+}
+
+.cols {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.nodes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  color: darkslategray;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.col1-node,
+.col2-node {
+  border-right: 3px groove rebeccapurple;
+}
+
+.row1,
+.row2 {
+  border-bottom: 3px groove rebeccapurple;
+}
+
+.nodes:hover {
+  cursor: pointer;
+  background-color: antiquewhite;
+}
+
+@media only screen and (max-width: 1200px) {
+  .game-body {
+    width: 50%;
+  }
+  .info {
+    width: 30vw;
+  }
+  #reset {
+    width: 8vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .game-body {
+    width: 70%;
+  }
+  .info {
+    width: 40vw;
+  }
+  #reset {
+    width: 10vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .game-body {
+    width: 80%;
+  }
+  .info {
+    width: 50vw;
+  }
+  #reset {
+    width: 12vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .game-body {
+    width: 85%;
+  }
+  .info {
+    width: 60vw;
+  }
+  #reset {
+    width: 15vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .game-body {
+    width: 90%;
+    height: 40vh;
+  }
+  .info {
+    width: 60vw;
+  }
+  #reset {
+    width: 15vw;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .game-body {
+    width: 90%;
+    height: 40vh;
+  }
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .info {
+    width: 70vw;
+  }
+  #reset {
+    width: 18vw;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .game-body {
+    width: 100%;
+    height: 30vh;
+  }
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .info {
+    width: 80vw;
+  }
+  #reset {
+    width: 22vw;
+  }
+}

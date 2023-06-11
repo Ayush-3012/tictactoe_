@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div class="game">
+      <h1>Welcome to <span>TicTacToe</span></h1>
+      <div class="game-body">
+        <div class="cols">
+          <div class="col1-node nodes row1" id="node1"></div>
+          <div class="col1-node nodes row2" id="node2"></div>
+          <div class="col1-node nodes row3" id="node3"></div>
+        </div>
+        <div class="cols" id="col1">
+          <div class="col2-node nodes row1" id="node4"></div>
+          <div class="col2-node nodes row2" id="node5"></div>
+          <div class="col2-node nodes row3" id="node6"></div>
+        </div>
+        <div class="cols">
+          <div class="col3-node nodes row1" id="node7"></div>
+          <div class="col3-node nodes row2" id="node8"></div>
+          <div class="col3-node nodes row3" id="node9"></div>
+        </div>
+      </div>
+      <div class="info">
+        <h3 class="win">Next plays : <span class="next">X</span></h3>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
