@@ -2,6 +2,7 @@ const nodes = new Array(9);
 const next = document.querySelector(".next");
 var text = document.querySelector(".text");
 const reset = document.querySelector("#reset");
+const audioWin = new Audio("beep.wav");
 
 let input = "X";
 let moves = 0;
@@ -18,6 +19,7 @@ reset.addEventListener("click", () => {
 function toggle(input) {
   return input === "X" ? "0" : "X";
 }
+audioWin.play();
 
 function checkwinner() {
   let winn = [
@@ -38,6 +40,10 @@ function checkwinner() {
     ) {
       text.innerText = `Winner is : ${nodes[e[0]].innerText}`;
       winner = true;
+      nodes[e[0]].style.backgroundColor = "bisque";
+      nodes[e[1]].style.backgroundColor = "bisque";
+      nodes[e[2]].style.backgroundColor = "bisque";
+      audioWin.play();
     }
   });
 }
@@ -61,7 +67,7 @@ nodes.forEach((key) => {
         });
         document
           .querySelector(".info")
-          .getElementsByTagName("img")[0].style.width = "50px";
+          .getElementsByTagName("img")[0].style.width = "100px";
       }
     }
 
